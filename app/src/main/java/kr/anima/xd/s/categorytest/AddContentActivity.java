@@ -100,6 +100,7 @@ public class AddContentActivity extends AppCompatActivity implements View.OnClic
         fromMainIntent.putExtra("Title", ET_Title.getText().toString());
 //        fromMainIntent.putExtra("Date", );
 //        fromMainIntent.putExtra("Category", );
+        // TODO :: 카테고리 자료구조
     }
 
 
