@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="kr.anima.xd.s.categorytest.AddContentActivity">
+
+    <EditText
+        android:id="@+id/ET_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:inputType="text"/>
+
+    <LinearLayout
+        android:id="@+id/LL_DatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:clickable="true">
+
+
+        <TextView
+            android:id="@+id/TV_Year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="년"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/TV_Month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="월"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/TV_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+
+        <CheckBox
+            android:id="@+id/CB_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CheckBox"/>
+
+        <CheckBox
+            android:id="@+id/CB_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CheckBox"/>
+
+        <CheckBox
+            android:id="@+id/CB_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CheckBox"/>
+
+        <CheckBox
+            android:id="@+id/CB_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CheckBox"/>
+
+        <CheckBox
+            android:id="@+id/CB_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CheckBox"/>
+
+        <CheckBox
+            android:id="@+id/CB_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CheckBox"/>
+
+        <CheckBox
+            android:id="@+id/CB_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CheckBox"/>
+
+        <CheckBox
+            android:id="@+id/CB_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CheckBox"/>
+
+        <CheckBox
+            android:id="@+id/CB_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CheckBox"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/Btn_AddContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:onClick="saveData"/>
+
+    <Button
+        android:id="@+id/Btn_Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"/>
+
+
+</LinearLayout>
