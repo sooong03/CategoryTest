@@ -67,17 +67,18 @@ public class AddContentActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.Btn_AddContent:
 
-                String title=ET_Title.getText().toString();
-                Boolean[] category=new Boolean[9];
-                for(int i=0; i<list.size(); i++){
-                    category[i]=false;
-                    if (list.get(i).isChecked()) category[i]=true;
-                }
-                items.add(new Item(selectDate, title, category));
-                setResult(Activity.RESULT_OK, intent);
-                finish();
+//                String title=ET_Title.getText().toString();
+//                Boolean[] category=new Boolean[9];
+//                for(int i=0; i<list.size(); i++){
+//                    category[i]=false;
+//                    if (list.get(i).isChecked()) category[i]=true;
+//                }
+////                items.add(new Item(selectDate, title, category));
+//                setResult(Activity.RESULT_OK, fromMainIntent);
+//                finish();
+                break;
             case R.id.Btn_Cancel:
-                setResult(Activity.RESULT_CANCELED, intent);
+                setResult(Activity.RESULT_CANCELED, fromMainIntent);
                 finish();
         }
     }
@@ -89,7 +90,7 @@ public class AddContentActivity extends AppCompatActivity implements View.OnClic
         TV_Year.setText(new SimpleDateFormat("yyyy").format(date));
         TV_Month.setText(new SimpleDateFormat("MM").format(date));
         TV_Date.setText(new SimpleDateFormat("dd").format(date));
-        getIntent().putExtra("Date", millseconds);
+//        getIntent().putExtra("Date", millseconds);
     }
 
     private void intentPutExtra(long date){
@@ -98,8 +99,9 @@ public class AddContentActivity extends AppCompatActivity implements View.OnClic
 
     public void saveData(View v){
         fromMainIntent.putExtra("Title", ET_Title.getText().toString());
-//        fromMainIntent.putExtra("Date", );
 //        fromMainIntent.putExtra("Category", );
+        setResult(Activity.RESULT_OK, fromMainIntent);
+        finish();
         // TODO :: 카테고리 자료구조
     }
 

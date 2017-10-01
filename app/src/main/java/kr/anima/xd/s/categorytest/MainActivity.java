@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.FAB:
                 Intent addContentIntent=new Intent(MainActivity.this, AddContentActivity.class);
-//                startActivity(addContentIntent);
                 startActivityForResult(addContentIntent, ADD_CONTENT);
                 break;
         }
@@ -82,6 +81,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case ADD_CONTENT:
                 switch (resultCode){
                     case Activity.RESULT_OK:
+                        String title=data.getStringExtra("Title");
+                        long date=data.getLongExtra("Date", 0);
+                        long timestamp=calendar.getTimeInMillis();
+
+                        insertDB(title, date, timestamp);
+                        list.add(new Item(data.getLongExtra("Date", 0), data.getStringExtra("Title")));
+                        adapter.notifyDataSetChanged();
                         break;
                     case Activity.RESULT_CANCELED:
                         break;
@@ -89,4 +95,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+    private void insertDB(String title, long date, long timestamp){
+        DBManager dbManager=new DBManager(MainActivity.this);
+        dbManager.openDB();
+
+        dbManager.insertTest(title, 1, 1);
+        dbManager.closeDB();
+    }
+
+
+
+
+
 }

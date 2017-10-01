@@ -10,7 +10,7 @@
 
     <style name="CheckBox">
         <item name="android:layout_margin">8dp</item>
-        <item name="android:drawableTop">@drawable/ic_test</item>
+        <item name="android:drawableTop">@drawable/ic_select_test</item>
         <item name="android:text">A</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:button">@null</item>

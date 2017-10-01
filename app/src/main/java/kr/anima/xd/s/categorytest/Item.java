@@ -38,4 +38,9 @@ public class Item {
         this.category = category;
         this.isChecked = isChecked;
     }
+
+    public Item(long date, String title){
+        this.date=date;
+        this.title=title;
+    }
 }
